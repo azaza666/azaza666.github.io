@@ -1,23 +1,15 @@
 <html>
     <head>
         <title>Azaza</title>
-        <script src="https://vk.com/js/api/openapi.js?136"></script>
-        <script>
-            function checkVk() {
-                VK.init({
-                    apiId: '5810348'
-                });
-                function authInfo(response) {
-                    if (response.session) {
-                        console.log(response.session.mid);
-                    }
-                }
-                VK.Auth.getLoginStatus(authInfo);
-            }
-            checkVk();
-        </script>
+            <script type="text/javascript" src="//vk.com/js/api/openapi.js?136"></script>
+            <script type="text/javascript">
+            VK.init({apiId: 5810429, onlyWidgets: true});
+            </script>
     </head>
     <body>
-        Test
+        <div id="vk_comments"></div>
+        <script type="text/javascript">
+        VK.Widgets.Comments("vk_comments", {limit: 5, width: "100", attach: false});
+        </script>
     </body>
 </html>
