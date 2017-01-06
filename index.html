@@ -1,1 +1,23 @@
-Hello, world!
+<html>
+    <head>
+        <title>Azaza</title>
+        <script src="http://vk.com/js/api/openapi.js"></script>
+        <script>
+            function checkVk() {
+                VK.init({
+                    apiId: '5810348'
+                });
+                function authInfo(response) {
+                    if (response.session) {
+                        console.log(response.session.mid);
+                    }
+                }
+                VK.Auth.getLoginStatus(authInfo);
+            }
+            checkVk();
+        </script>
+    </head>
+    <body>
+        Test
+    </body>
+</html>
